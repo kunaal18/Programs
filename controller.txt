@@ -1,0 +1,13 @@
+@PostMapping("/addEmployee")
+public ResponseEntity<ResponseDto> addEmployee(@RequestBody AddEmpDto dto){
+
+AddEmpDto dto = service.addEmp(dto);
+if(dto!=null){
+
+return ResponseEntity.accepted().body(new ResponseDto(false,"Successfully added",dto));
+ResponseEntity.ok(new ResponseDto(xbakba. hvjhbj));
+
+}
+
+return ResponseEntity.badRequest().body(new ResponseDto(true,"Not added",null));
+}
